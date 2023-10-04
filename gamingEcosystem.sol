@@ -111,7 +111,7 @@ contract BlockchainGamingEcosystem {
         numberOfNFTs = player.ownedNFTs.length;
     }
 
-    function viewAsset(uint256 tokenID) public  returns (address , string memory gameName, uint256 price) {
+    function viewAsset(uint256 tokenID) public  (address , string memory gameName, uint256 price) {
         address ownerAddress = nftContract.ownerOf(tokenID);
         owner = ownerAddress;
         uint256 gameID = tokenID / 1000;
